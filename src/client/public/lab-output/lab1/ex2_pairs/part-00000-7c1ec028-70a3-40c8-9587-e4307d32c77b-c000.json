@@ -1,0 +1,15 @@
+{"character1":"harry","character2":"ron","count":193}
+{"character1":"harry","character2":"hermione","count":92}
+{"character1":"hermione","character2":"ron","count":90}
+{"character1":"harry","character2":"snape","count":45}
+{"character1":"harry","character2":"malfoy","count":40}
+{"character1":"dumbledore","character2":"harry","count":35}
+{"character1":"ron","character2":"snape","count":22}
+{"character1":"malfoy","character2":"ron","count":21}
+{"character1":"hermione","character2":"snape","count":14}
+{"character1":"dumbledore","character2":"ron","count":11}
+{"character1":"malfoy","character2":"snape","count":8}
+{"character1":"hermione","character2":"malfoy","count":7}
+{"character1":"dumbledore","character2":"hermione","count":5}
+{"character1":"dumbledore","character2":"snape","count":3}
+{"character1":"dumbledore","character2":"malfoy","count":1}

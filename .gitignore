@@ -1,0 +1,79 @@
+# ================================
+#  NODE / NEXT.JS
+# ================================
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+.next/
+out/
+dist/
+build/
+.vercel/
+.env
+.env.*
+!.env.example
+
+# ================================
+#  SPARK / HADOOP OUTPUT
+# ================================
+data/output/
+data/output/**
+/data/output/**
+spark-warehouse/
+derby.log
+metastore_db/
+tmp/
+tmp/**
+logs/
+logs/**
+checkpoint/
+checkpoint/**
+
+# ================================
+#  PYTHON / PYSPARK
+# ================================
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.egg-info/
+.eggs/
+
+# ================================
+#  DOCKER / COMPOSE
+# ================================
+docker/data/
+docker/logs/
+docker-volumes/
+*.pid
+*.sock
+
+# ================================
+#  OS / EDITOR FILES
+# ================================
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*.idea/
+.vscode/
+*.iml
+
+# ================================
+#  GIT LARGE FILES
+# ================================
+*.log
+*.csv
+*.tsv
+*.parquet
+*.gz
+*.zip
+*.jar
+*.bin
+
+# ================================
+#  PUBLIC STATIC DATA
+# ================================
+!public/lab-output/**

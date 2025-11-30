@@ -1,0 +1,21 @@
+{
+    "name": "bigdata",
+    "version": "1.0.0",
+    "main": "spark-runner.js",
+    "scripts": {
+        "spark": "node spark-runner.js",
+        "spark:lab1:ex1": "node spark-runner.js src/Lab1/word-count.py",
+        "spark:lab1:ex2": "node spark-runner.js src/Lab1/character.py",
+        "spark:lab1:ex3": "node spark-runner.js --client src/Lab1/ex3_sentiment.py",
+        "spark:lab1:ex4": "node spark-runner.js --client src/Lab1/ex4_antiwork.py",
+        "spark:lab2": "node spark-runner.js src/Lab2/lab2.py",
+        "spark:run": "node spark-runner.js"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "description": "",
+    "dependencies": {
+        "recharts": "^3.5.1"
+    }
+}
