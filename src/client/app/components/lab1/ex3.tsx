@@ -126,13 +126,11 @@ export default function Ex3Display({ characters, chapters }: Props) {
                                     dy={10}
                                 />
                                 <YAxis
-                                    // Tự động scale theo dữ liệu (ví dụ -0.02 đến 0.08)
                                     domain={["auto", "auto"]}
                                     axisLine={false}
                                     tickLine={false}
                                     tick={{ fill: "#888", fontSize: 12 }}
                                     width={50}
-                                    // FIX: Thêm type cho val
                                     tickFormatter={(val: number) =>
                                         Number(val).toFixed(3)
                                     }
