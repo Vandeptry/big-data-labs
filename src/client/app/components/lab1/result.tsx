@@ -1,17 +1,14 @@
 //src/client/app/components/lab1/result.tsx
-//src/client/app/components/lab1/result.tsx
 "use client";
 
 import { useEffect, useState } from "react";
-// Đảm bảo file ex1.tsx có export WordCount.
-// Nếu file ex1.tsx chưa export Ex1Response, ta sẽ tự định nghĩa bên dưới.
 import Ex1Display, { WordCount } from "./ex1";
 import Ex2Display from "./ex2";
 import Ex3Display from "./ex3";
 import { Ex4Response } from "@/app/api/lab1/ex4/route";
 import Ex4Display from "./ex4";
+import type { CharacterSentiment, ChapterSentiment } from "@/app/type";
 
-// --- FIX: Thêm Interface cho cấu trúc dữ liệu Bài 1 ---
 export interface Ex1Response {
     words: WordCount[];
     characters: WordCount[];
@@ -32,18 +29,6 @@ export interface CharacterPair {
 export interface Ex2Response {
     sentences: SentenceData[];
     pairs: CharacterPair[];
-    // Giữ nguyên như bạn gửi, không thêm characterSentiment để tránh lỗi
-}
-
-export interface CharacterSentiment {
-    character: string;
-    avg_sentiment: number;
-}
-
-export interface ChapterSentiment {
-    character: string;
-    chapter_number: number;
-    avg_sentiment: number;
 }
 
 export interface Ex3Response {
@@ -60,9 +45,6 @@ const TABS = [
 
 export default function Lab1Result() {
     const [activeTab, setActiveTab] = useState<string>("ex1");
-
-    // --- FIX: Sửa kiểu dữ liệu State của Bài 1 ---
-    // Thay vì WordCount[], đổi thành Ex1Response | null để khớp với dữ liệu trả về
     const [ex1Data, setEx1Data] = useState<Ex1Response | null>(null);
 
     const [ex2Data, setEx2Data] = useState<Ex2Response | null>(null);
@@ -140,7 +122,6 @@ export default function Lab1Result() {
                 {/* === BÀI 1 === */}
                 {activeTab === "ex1" && (
                     <section className="animate-in fade-in duration-300">
-                        {/* FIX: Kiểm tra loading và null trước khi render Ex1Display */}
                         {loadingEx1 ? (
                             <div className="text-gray-500 text-center py-8">
                                 Đang tải dữ liệu EX1...

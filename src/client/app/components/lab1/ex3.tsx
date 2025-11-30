@@ -13,7 +13,7 @@ import {
     ResponsiveContainer,
 } from "recharts";
 
-import type { CharacterSentiment, ChapterSentiment } from "./result";
+import type { CharacterSentiment, ChapterSentiment } from "@/app/type";
 
 interface Props {
     characters: CharacterSentiment[];
