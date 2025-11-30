@@ -21,17 +21,13 @@ interface Props {
 }
 
 export default function Ex3Display({ characters, chapters }: Props) {
-    // Lấy danh sách tên nhân vật (unique) và loại bỏ null/undefined
     const characterNames = useMemo(() => {
         const names = Array.from(
-            new Set(
-                characters.map((c) => c.character).filter((n) => n) // Lọc bỏ giá trị null/empty
-            )
+            new Set(characters.map((c) => c.character).filter((n) => n))
         );
-        return names.length > 0 ? names : ["Harry"]; // Fallback nếu không có tên nào
+        return names.length > 0 ? names : ["Harry"];
     }, [characters]);
 
-    // Khởi tạo state an toàn
     const [selectedCharacter, setSelectedCharacter] = useState<string>(
         characterNames[0] || "Harry"
     );
@@ -39,7 +35,6 @@ export default function Ex3Display({ characters, chapters }: Props) {
     const chapterSeries = useMemo(() => {
         return chapters
             .filter((c) => {
-                // FIX LỖI CRASH: Kiểm tra an toàn trước khi toLowerCase
                 const charName = String(c.character ?? "").toLowerCase();
                 const selected = String(selectedCharacter ?? "").toLowerCase();
                 return charName === selected;
@@ -47,7 +42,6 @@ export default function Ex3Display({ characters, chapters }: Props) {
             .sort((a, b) => a.chapter_number - b.chapter_number)
             .map((c) => ({
                 chapter: c.chapter_number,
-                // Ép kiểu number để tránh lỗi tính toán
                 avg_sentiment: Number(c.avg_sentiment ?? 0),
             }));
     }, [chapters, selectedCharacter]);
