@@ -7,7 +7,7 @@ import Ex2Display from "./ex2";
 import Ex3Display from "./ex3";
 import { Ex4Response } from "@/app/api/lab1/ex4/route";
 import Ex4Display from "./ex4";
-import type { CharacterSentiment, ChapterSentiment } from "@/app/type";
+import type { CharacterSentiment, ChapterSentiment } from "../../type";
 
 export interface Ex1Response {
     words: WordCount[];

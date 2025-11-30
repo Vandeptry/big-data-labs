@@ -12,7 +12,7 @@ import {
     Legend,
 } from "recharts";
 
-import { Ex4Response, TopPost } from "@/app/type";
+import { Ex4Response, TopPost } from "../../type";
 
 interface Ex4DisplayProps {
     data: Ex4Response;
