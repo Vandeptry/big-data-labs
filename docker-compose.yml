@@ -64,9 +64,16 @@ services:
         networks:
             - bigdata_network
         command: >
-            /bin/bash -c "apt-get update &&
-            apt-get install -y python3 python3-pip wget curl &&
-            pip install pyspark &&
+            /bin/bash -c "
+            apt-get update &&
+            apt-get install -y python3 python3-pip wget curl nano &&
+            pip install pyspark && 
+            wget https://mirrors.sonic.net/apache/pig/pig-0.17.0/pig-0.17.0.tar.gz &&
+            tar -xvf pig-0.17.0.tar.gz &&
+            mv pig-0.17.0 /opt/pig &&
+            echo 'export PIG_HOME=/opt/pig' >> ~/.bashrc &&
+            echo 'export PATH=$PATH:$PIG_HOME/bin' >> ~/.bashrc &&
+            source ~/.bashrc &&
             exec /bin/bash"
         tty: true
 
