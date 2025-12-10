@@ -1,0 +1,62 @@
+[
+  {
+    "month": 9,
+    "avgArrDelay": 3.9710522897978717,
+    "avgDepDelay": 5.957469267573248
+  },
+  {
+    "month": 4,
+    "avgArrDelay": 5.437010496203392,
+    "avgDepDelay": 7.224584700150881
+  },
+  {
+    "month": 11,
+    "avgArrDelay": 5.775272384644096,
+    "avgDepDelay": 7.776826455842987
+  },
+  {
+    "month": 5,
+    "avgArrDelay": 6.182335832189783,
+    "avgDepDelay": 7.635386049447048
+  },
+  {
+    "month": 10,
+    "avgArrDelay": 6.468735107549999,
+    "avgDepDelay": 7.65300809816604
+  },
+  {
+    "month": 3,
+    "avgArrDelay": 8.157116625107738,
+    "avgDepDelay": 9.80294369199147
+  },
+  {
+    "month": 1,
+    "avgArrDelay": 8.595927997529733,
+    "avgDepDelay": 9.796979449674879
+  },
+  {
+    "month": 2,
+    "avgArrDelay": 9.243230299158647,
+    "avgDepDelay": 10.305092174675314
+  },
+  {
+    "month": 8,
+    "avgArrDelay": 9.379478480464256,
+    "avgDepDelay": 10.487321969039634
+  },
+  {
+    "month": 7,
+    "avgArrDelay": 12.17491424395229,
+    "avgDepDelay": 13.030536278116278
+  },
+  {
+    "month": 6,
+    "avgArrDelay": 12.377035664140234,
+    "avgDepDelay": 12.841165191286567
+  },
+  {
+    "month": 12,
+    "avgArrDelay": 12.39063184772656,
+    "avgDepDelay": 13.427820688106873
+  }
+]
